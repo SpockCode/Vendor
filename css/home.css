@@ -1,0 +1,518 @@
+
+/*
+    * form {
+        width: 100vw;
+        height: 100vh;
+        padding: 200px;
+    }
+    
+    .navbar {
+      font-size: 1.0em;
+    color: #3498db;
+    
+    }
+    img{
+       
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier 
+} 
+*/
+body {
+   margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+#header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  line-height: 60px;
+}
+
+
+
+
+/* CSS for home page */
+.home{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+     padding: 0;
+  border: 0;
+    background-image: url("../images/img8.png");
+   background-repeat: no-repeat;
+    background-size: 100% 720px;  /*  */
+    overflow: auto;
+   
+    }
+
+
+div#welcome img{
+    
+       margin: 0 auto;
+     height: 250px;
+    margin-left: 550px;
+    margin-top: 200px; 
+    margin-bottom: 200px;
+    border-radius: 5px;
+     opacity: 0.80;
+    filter: alpha(opacity=80);
+  }
+
+/*
+div#welcome img{
+ margin: 0 auto;
+ margin-left: 400px;
+ height: 200px;
+     opacity: 0.70;
+    filter: alpha(opacity=70);
+} 
+
+div#welcome p{
+      margin: 0 auto;
+    margin-top: 80px;
+    font-weight: 300;
+     font-family: "Times New Roman", Times, serif;
+   float: left;
+ } 
+
+small{
+    font-style: oblique;
+}
+
+*/
+
+div#choice{
+    
+    margin: 0 auto;
+    margin-right: 30px;
+   float: right;
+    padding: 10px;
+   
+    
+   /* padding: 10px;
+     margin-left: 245px; 
+    float: left;*/
+ }
+ /*
+div#choice2{
+    margin: 0 auto;
+   padding: 10px;
+    padding-left: 10px;
+    margin-left: 245px; 
+    float: right; 
+ }
+*/
+
+/* CSS for sign-in page */
+
+.signup{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  padding: 0;
+  border: 0;
+    background-image: url("../images/img9.png");
+    background-repeat: no-repeat;
+    background-size: 100% 720px; 
+    overflow: hidden;
+    
+    
+    }
+
+
+
+div#sign {
+  /* width: 400px;
+    height: 560px; */
+    text-align: center;
+    background-color: #34495E ;
+    border-radius: 5px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 450px;
+    margin-left: 500px;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+   /* overflow-y: auto;*/
+    z-index: 5;
+
+}
+
+.img {
+  margin-top: 1.5em;
+  margin-bottom: -2.5em;
+ /* position: fixed;
+    z-index: 2; 
+    margin-left: 4.0em;
+    margin-right: 4.0em;
+    */
+    border-radius: 5px;
+}
+
+          
+    
+    
+    
+
+
+form span {
+   color:antiquewhite;
+   /* font-style: italic;
+    font-size:  0.95em; */
+    font: italic 14px cosmic sans; 
+    margin-top: -55px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: -35px;
+    padding: -10px;
+    align-self: center;
+       
+  }
+
+form#sign{
+     margin-top: 20px;
+    margin-bottom: -15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  
+}
+
+.form-control{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 10px;
+    padding: 10px;
+    
+ }
+
+
+
+.form-group {
+     margin-left: -30px;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+form i{
+    margin-left: 0px;
+    margin-right: -40px;
+    float: left;
+    clear: left;
+}
+
+form#sign input.btn{
+     margin-top: -10px;
+    margin-bottom: 20px;
+clear: none;
+     display: inline;
+   
+    }
+
+
+div#sign img{
+     margin: 0 auto;
+ margin-left: 400px;
+ height: 140px;
+    
+   /* width: 150px;
+    height: 150px; */
+    margin-top: -320px; 
+    margin-bottom: -200px;
+     margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 5px;
+  /*  position: fixed;
+    z-index: 2; */ 
+     
+    /*opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    
+}
+
+
+/* Services Form for Registration */
+
+
+.next{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  padding: 0;
+  border: 0;
+    background-image: url("../images/img9.png");
+    background-repeat: no-repeat;
+    background-size: 100% 720px; 
+    overflow: hidden;
+    }
+
+
+div#next {
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    background-color: #34495E ;
+    border-radius: 5px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 450px;
+    margin-left: 500px;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    
+}
+
+form#form2{
+     margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 20px;
+    margin-right: 20px; 
+    float: center;
+    padding: 30px;
+    color: aliceblue;
+
+}
+
+
+div#next img{
+     margin: 0 auto;
+ margin-left: 400px;
+ height: 150px;
+    
+   /* width: 150px;
+    height: 150px; */
+    margin-top: -200px; 
+    margin-bottom: -200px;
+     margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 5px;
+     
+    /*opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    
+}
+
+
+/* Checkboxes */
+
+form#form2 label {
+    float: left;
+    margin-left: -3em;
+    margin-bottom: -0.5em;
+    clear: right;
+}
+
+form#form2 input {
+    
+}
+
+
+
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: 0.7em;
+    margin-top: 0.2em
+}
+
+
+
+.checkbox .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+
+
+.checkbox label input[type="checkbox"] /*,
+.radio label input[type="radio"] */ {
+    display: none;
+}
+
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon /*,
+.radio label input[type="radio"] + .cr > .cr-icon*/  {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon /*,
+.radio label input[type="radio"]:checked + .cr > .cr-icon */ {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr /*,
+.radio label input[type="radio"]:disabled + .cr */ {
+    opacity: .5;
+}
+}
+
+
+
+
+/* CSS for Login Page */
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  padding: 0;
+  border: 0;
+    background-image: url("../images/img7.png");
+    background-repeat: no-repeat;
+    background-size: 100% 720px; 
+    overflow: auto;
+    }
+
+div#log {
+    width: 330px;
+    height: 300px;
+    text-align: center;
+    background-color: #34495E ;
+    border-radius: 5px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 450px;
+    margin-left: 500px;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    
+}
+
+form#log{
+     margin-top: 80px;
+    margin-bottom: 90px;
+    padding: 20px;
+    float: center;
+}
+
+
+div#log img{
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
+    margin-bottom: -90px;
+     margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 5px;
+     
+    /*opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    
+}
+
+input {
+    height: 30px;
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    background-color: antiquewhite;
+    float: center;
+}
+
+input.btn {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    float: right;
+}
+
+div#text a{
+    color: white;
+}
+
+
+/*
+.form-group: :before {
+    content: "\e008";
+    position: absolute;
+    font-family: 'Glyphicons Halflings';
+    font-size: 30px;
+    
+} */
+
+
+/*
+@media (max-width: 599px) {
+  #header .container {
+    width: 100%;
+  }
+  #header h1 {
+    padding-left: 3%;
+  }
+*/
+
+/*Responsive */
+
+@media screen and (max-width:480px){
+  
+.home {
+         display: none; 
+    }
+    
+  .content {
+      margin-left: 0px;
+      width: 100%;
+  } 
+    
+
+     
+
+}
+
+
+
+@media screen and (min-width:360px) and (max-width:480px){
+ 
+ 
+    
+}
+
+
+
+
+@media screen and (min-width:480px){
+ 
+     
+.section {
+         display: none; 
+    }
+    
+  .content {
+      margin-left: 0px;
+      width: 100%;
+  } 
+    
+    
+
+}

@@ -22,3 +22,4 @@
 [0208/114454:ERROR:node_debugger.cc(86)] Cannot start debugger server
 [0208/114857:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
 [0208/114857:ERROR:node_debugger.cc(86)] Cannot start debugger server
+[0308/122010.675:ERROR:file_io.cc(30)] read: expected 36, observed 0
