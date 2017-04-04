@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    $("#sign")[0].reset();
     $(".home").show();
     $(".signup").hide();
     $(".next").hide();
@@ -105,3 +104,8 @@ function myFunction(xml) {
 
 
 */
+
+
+
+
+

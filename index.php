@@ -1,3 +1,4 @@
+<?php $thisPage="Home"; ?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,7 +16,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/home.js"></script>
-<script src="jscript.js"></script>
+<script src="js/jscript.js"></script>
 
 
 <!--<nav class="head container-fluid">
@@ -54,10 +55,10 @@
           &nbsp;<a href="index.php"><img class="img-thumbnail" src="images/riwamalogo.png"></a>
         </div>
         <br>  <br> 
- <form class="col-md-9 col-sm-9 col-xs-9" id="sign" name="sign" method="post" onsubmit="return register();" action="register.php" >
+ <form class="col-md-9 col-sm-9 col-xs-9" id="sign" name="sign" method="post" onsubmit="return register();" action="register.php"> <!-- action="register.php" -->
             <div class="form-group has-feedback">
               
-           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Enter Company Name" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span  id="err1"> </span>
+           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Enter Company Name" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span id="err1"> </span>
                     
             </div> <br>
              <div class="form-group has-feedback ">
@@ -89,7 +90,7 @@
      </div> 
     </section>
     
-    <section class="next"> 
+    <section class="next" id="sec"> 
          <header id="header">            
              <div class="container-fluid col-md-5 col-sm-5 col-xs-5" id="choice">
     <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-2" id="altlog2" value="Login"> 
