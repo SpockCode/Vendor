@@ -1,8 +1,11 @@
-<?php $thisPage="Home"; ?>
 <!DOCTYPE html>
-
+<!--
+// $thisPage="Home";  -->
 <html lang="en">
   <head>
+  <!--    <meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>  -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,23 +58,23 @@
           &nbsp;<a href="index.php"><img class="img-thumbnail" src="images/riwamalogo.png"></a>
         </div>
         <br>  <br> 
- <form class="col-md-9 col-sm-9 col-xs-9" id="sign" name="sign" method="post" onsubmit="return register();" action="register.php"> <!-- action="register.php" -->
+ <form class="col-md-9 col-sm-9 col-xs-9" id="sign" name="sign" method="post" onsubmit="return register();"> <!-- action="register.php" -->
             <div class="form-group has-feedback">
               
-           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Enter Company Name" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span id="err1"> </span>
+           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Enter Company Name" required="required" onkeyup="checkcompany();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span id="err1"> </span>
                     
             </div> <br>
              <div class="form-group has-feedback ">
            <input class="form-control" type="email" name="companyemail" id="companyemail" placeholder="Enter Company Email" required="required"><i class="glyphicon glyphicon-envelope form-control-feedback"></i><span id="err2"></span>
             </div> <br>
             <div class="form-group has-feedback">
-            <input class="form-control" type="number" min="10"  name="telephone" id="telephone" placeholder="Enter Company Phone Number" required="required"><i class="glyphicon glyphicon-phone-alt form-control-feedback"></i><span id="err3"></span>
+            <input class="form-control" type="number" min="10" name="telephone" id="telephone" placeholder="Enter Company Phone Number" required="required"><i class="glyphicon glyphicon-phone-alt form-control-feedback"></i><span id="err3"></span>
             </div> <br>
             <div class="form-group has-feedback">
             <input class="form-control" type="text" name="address" id="address"  placeholder="Enter Company Address" required="required"><i class="glyphicon glyphicon-home form-control-feedback"></i><span id="err4"></span>
             </div> <br>
              <div class="form-group has-feedback ">
-           <input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span id="err5"></span>
+           <input class="form-control" type="text" name="username" id="username" placeholder="Enter Username"   required="required" onkeyup="checkuser();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span id="err5"></span>
             </div> <br>
              <div class="form-group has-feedback">
             <input class="form-control" type="password" name="password"  id="password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span id="err6"></span>
@@ -81,7 +84,7 @@
             </div> <br>
            
         <div>
-            <input type="submit" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="next" value="Next">            
+            <input type="submit" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="next" name="next" value="Next">            
            &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;
             <input type="reset" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="next" value="Clear" />  
            </div>

@@ -1,9 +1,12 @@
 $(document).ready(function(){
+    // $(".home").load(function(){
     $(".home").show();
     $(".signup").hide();
     $(".next").hide();
     $(".login").hide();
 });
+   // });
+
 
 
 
@@ -11,7 +14,7 @@ $(document).ready(function(){
     $("#vreg").click(function(){
         $(".home").hide();
         $(".login").hide();
-        $(".next").show();
+        $(".next").hide();
          $(".signup").show();
     });
 });
@@ -57,10 +60,10 @@ $(document).ready(function(){
     });
 });
 
-
 /*
+
 $(document).ready(function(){
-    $("#next").click(function(){
+  $('#next').on('click',function(){
         $(".home").hide();
         $(".login").hide();
          $(".signup").hide();

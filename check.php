@@ -26,16 +26,18 @@ if (isset($_POST['username'])) {
 $query=mysqli_query($connect, "SELECT * FROM users WHERE username ='$user'");
   
 $check = mysqli_num_rows($query);
+
     
-    if($check==0) {
-        echo "Username is Available"; 
+    if($check>0) {
+        //response==0;
+        echo "Username is Not available"; 
     }
     
-    else if($check==1){
-        echo "Username is Not available";
+    else {
+        echo "Correct";
+        //response==1
     }
-
-
+ exit();
     }
 
 
@@ -49,14 +51,18 @@ $query=mysqli_query($connect, "SELECT * FROM vendor WHERE vname ='$cname'");
   
 $check1 = mysqli_num_rows($query);
     
-   
-    if($check1==0) {
-         echo "Company Name Available";
+  
+    if($check1>0) {
+        
+         echo "This Company Name is Already registered!";
+               // response==0;
     }
     
-    else if($check1==1){
-        echo "This Company Name is Already registered!";
+    else{
+    echo "Correct";
+       //  response==1;
     }
+     exit();
 }
 
 
