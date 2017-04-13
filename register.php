@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<Title> Vendor Registration Process.</Title>    
-
-
-
 <?php
 session_start();
 
@@ -66,7 +59,7 @@ mysqli_select_db($connect, "riwama"); // makes use of the database
   }
 */
 //}
-	if ((rest1) && (rest2))
+	if (rest1 && rest2)
     {
     echo "Form Submitted Succesfully";
     
@@ -95,14 +88,10 @@ echo "Mail Sent.";
 
 //else { echo "What the hell happened?"; }
 
-mysqli_close($connect); // Connection Closed
+//mysqli_close($connect); // Connection Closed
     
 //header('Location: index.php');
    // print("<script language='javascript'>location.href = 'index.php#sec'</script>");
    // header('Location:'.$_SERVER['PHP_SELF']);
  
 ?>
-</head>
-<body>
-</body>
-</html>

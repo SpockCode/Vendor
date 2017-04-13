@@ -3,9 +3,9 @@
 // $thisPage="Home";  -->
 <html lang="en">
   <head>
-  <!--    <meta http-equiv='cache-control' content='no-cache'>
+ <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
-<meta http-equiv='pragma' content='no-cache'>  -->
+<meta http-equiv='pragma' content='no-cache'>  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,7 +65,7 @@
                     
             </div> <br>
              <div class="form-group has-feedback ">
-           <input class="form-control" type="email" name="companyemail" id="companyemail" placeholder="Enter Company Email" required="required"><i class="glyphicon glyphicon-envelope form-control-feedback"></i><span id="err2"></span>
+           <input class="form-control" type="email" name="companyemail" id="companyemail" placeholder="Enter Company Email" value="" required="required"><i class="glyphicon glyphicon-envelope form-control-feedback"></i><span id="err2"></span>
             </div> <br>
             <div class="form-group has-feedback">
             <input class="form-control" type="number" min="10" name="telephone" id="telephone" placeholder="Enter Company Phone Number" required="required"><i class="glyphicon glyphicon-phone-alt form-control-feedback"></i><span id="err3"></span>
@@ -89,6 +89,9 @@
             <input type="reset" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="next" value="Clear" />  
            </div>
        </form>
+     <!--   <script type="text/javascript">
+                 document.getElementById("sign").reset();
+</script> -->
        
      </div> 
     </section>
@@ -148,19 +151,17 @@
     </section>
     
   <section class="login" id="login"> 
-          <header id="header">
-            
-             <div class="container-fluid col-md-5 col-sm-5 col-xs-5" id="choice">
+          <header id="header">         <div class="container-fluid col-md-5 col-sm-5 col-xs-5" id="choice2">
     <input type="submit" class="btn btn-md btn-primary col-md-2" id="altreg" value="Sign Up"> 
               
      </div>
     </header> 
     <div class="container" id="log">
          <a href="index.php"> <img class="img-thumbnail" src="images/Riwama.png"> </a>
-        <form class="col-md-10 col-sm-10 col-xs-10" id="log" enctype="application/json">
+        <form class="col-md-10 col-sm-10 col-xs-10" id="log" > <!--enctype="application/json" -->
             <div class="form-group has-feedback ">
            <input class="form-control" type="text" name="companyname" placeholder="Enter Company Name" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i>
-            </div>
+            </div> <br>
             <div class="form-input has-feedback">
             <input class="form-control" type="password" name="Password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i>
             </div>

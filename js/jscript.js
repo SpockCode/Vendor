@@ -1,10 +1,10 @@
 
-
 function checkuser()
 {
  var name=document.getElementById( "username" ).value;
-	
- if(name)
+
+ if(name != '')
+//name is always a value u can use this only if name could return null but an input will always return a value might be '' though but will never be null
  {
   $.ajax({
   type: 'post',
@@ -96,11 +96,12 @@ function  register(){
          valid = false;
     } else {  document.getElementById("err1").innerHTML= "";}
     
-     if(namehtml!="Correct")
+     if(namehtml=="Correct"||namehtml== "")
        {
-            document.getElementById("err1").innerHTML= "Company is already registered.";
-           valid = false;
-       } else {  document.getElementById("err1").innerHTML= ""; }
+            //document.getElementById("err1").innerHTML= "Company is already registered.";
+           valid = true;
+       } else { document.getElementById("err1").innerHTML= "Company is already registered.";
+               valid = false; /*document.getElementById("err1").innerHTML= ""; */ }
        
     
      //if ($(company).val() != ''){ }
@@ -124,13 +125,15 @@ function  register(){
       
 	} else { document.getElementById("err5").innerHTML= "";}
      
-   if(userhtml!="Correct")
+   if(userhtml=="Correct"||userhtml=="")
      
        {
-            document.getElementById("err5").innerHTML= "Username is taken.";
-           valid = false;
-       }
-   else { document.getElementById("err5").innerHTML= "";}
+           // document.getElementById("err5").innerHTML= "Username  '" + username + "' is taken.";
+           
+           valid = true;
+      }
+   else {  document.getElementById("err5").innerHTML= "Username  '" + username + "' is taken.";
+         valid=false; /*document.getElementById("err5").innerHTML= ""; */}
     
 	if(password.length<=5)
     {
@@ -149,16 +152,33 @@ function  register(){
 	        
     
         var data = {'companyname': company,'companyemail': email,'telephone': telephone,'address': address, 'username': username,'password': password };
-		
+		 console.log(data);
+		 console.log('this is data')
             
         $.ajax({
+	    //how are you running ur php is it via a server?
+		
         url: 'register.php',    //give your url here
         type: 'POST',
-        cache: false,
+       cache: false,
+        async : false,
         data: data,
+        error: function(data){
+			console.log(data.message);
+			console.log('error message')
+           alert ("Registration Not Complete.");
+		},
         success: function(data){
+
               alert ("Registration Complete.");
-        },
+        }
+		
+          //   setTimeout(
+          //  function(){
+          //      document.getElementById( "sign" ).reset();
+         //   },
+         //   5
+          //s  )
 
      });
 		      
@@ -169,6 +189,3 @@ function  register(){
     return valid;
   
 	}
-
-
-

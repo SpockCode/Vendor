@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     // $(".home").load(function(){
     $(".home").show();
@@ -59,6 +60,7 @@ $(document).ready(function(){
          $(".signup").show();
     });
 });
+
 
 /*
 
