@@ -6,7 +6,10 @@ $(document).ready(function(){
     $(".next").hide();
     $(".login").hide();
 });
+
+
    // });
+
 
 
 
@@ -15,7 +18,7 @@ $(document).ready(function(){
     $("#vreg").click(function(){
         $(".home").hide();
         $(".login").hide();
-        $(".next").hide();
+        $(".next").show();
          $(".signup").show();
     });
 });

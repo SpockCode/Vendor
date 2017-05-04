@@ -69,28 +69,7 @@ div#welcome img{
     filter: alpha(opacity=80);
   }
 
-/*
-div#welcome img{
- margin: 0 auto;
- margin-left: 400px;
- height: 200px;
-     opacity: 0.70;
-    filter: alpha(opacity=70);
-} 
 
-div#welcome p{
-      margin: 0 auto;
-    margin-top: 80px;
-    font-weight: 300;
-     font-family: "Times New Roman", Times, serif;
-   float: left;
- } 
-
-small{
-    font-style: oblique;
-}
-
-*/
 
 div#choice{
     
@@ -104,15 +83,9 @@ div#choice{
      margin-left: 245px; 
     float: left;*/
  }
- /*
-div#choice2{
-    margin: 0 auto;
-   padding: 10px;
-    padding-left: 10px;
-    margin-left: 245px; 
-    float: right; 
- }
-*/
+
+.quote{display: none;}
+
 
 /* CSS for sign-in page */
 
@@ -133,8 +106,8 @@ div#choice2{
 
 
 div#sign {
-  /* width: 400px;
-    height: 560px; */
+   /*width: 40em;
+    height: auto; */
     text-align: center;
     background-color: #34495E ;
     border-radius: 5px;
@@ -148,39 +121,45 @@ div#sign {
     z-index: 5;
 
 }
-
-.img {
-  margin-top: 1.5em;
+ .regform{display: none;}  
+.img{}
+.signup img#img{
+  margin-top: -7em;
   margin-bottom: -2.5em;
  /* position: fixed;
     z-index: 2; 
     margin-left: 4.0em;
     margin-right: 4.0em;
+      margin-top: 5em;
     */
+  height: 9em;
+    width: 9em;
     border-radius: 5px;
 }
 
 
 form span {
    color:antiquewhite;
-   /* font-style: italic;
-    font-size:  0.95em; */
-    font: italic 14px cosmic sans; 
+  font: italic 14px cosmic sans; 
     margin-top: -55px;
     margin-bottom: 20px;
     margin-left: 15px;
     margin-right: -35px;
     padding: -10px;
-    align-self: center;
+   
+    /*align-self: center; */
+    /*margin-top: -5em; font: italic 13px cosmic sans; height:auto; */
        
   }
 
 form#sign{
-     margin-top: 20px;
+     margin-top: 1em;
+    /*margin-top: 1.5em; */
     margin-bottom: -15px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
+    overflow: hidden;
   
 }
 
@@ -190,16 +169,20 @@ form#sign{
     margin-left: 40px;
     margin-right: 10px;
     padding: 10px;
-    
+      
  }
 
-
-
+/*
+form#sign fieldset .form-control{ float: left; clear: left;}
+form#sign fieldset i{ float: left; }
+form#sign fieldset .err{ float: left; }
+*/
 .form-group {
      margin-left: -30px;
     margin-right: 10px;
     margin-top: -10px;
     margin-bottom: -10px;
+
 }
 
 form i{
@@ -209,13 +192,13 @@ form i{
     clear: left;
 }
 
-form#sign input.btn{
-     margin-top: -10px;
-    margin-bottom: 20px;
-clear: none;
-     display: inline;
-   
-    }
+form#sign input.btn{ margin-top: -10px;   margin-bottom: 20px; }
+
+form#sign input#next{margin-left: 10em; margin-right: -8em;}
+form#sign input#clear{margin-left: -6em; margin-right: 10em;}
+
+div#accept{text-align: justify; color: aliceblue; font: italic 13px cosmic sans; float: left; margin-top: -0.3em; margin-bottom: 0.5em; margin-left: -2em; margin-right: -5em; }
+div#accept a{ color: aliceblue; text-decoration: underline;}
 
 
 div#sign img{
@@ -310,11 +293,7 @@ form#form2 label {
     clear: right;
 }
 
-form#form2 input {
-    
-}
-
-
+  form h5{ margin-left: 0;margin-right: -5em;display: flex; font: italic 15px cosmic sans;}
 
 
 .checkbox label:after {
@@ -370,7 +349,7 @@ form#form2 input {
 .radio label input[type="radio"]:disabled + .cr */ {
     opacity: .5;
 }
-}
+
 
 
 
@@ -378,20 +357,28 @@ form#form2 input {
 /* CSS for Login Page */
 
 .login{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
   padding: 0;
   border: 0;
-    background-image: url("../images/img6.png");
-    background-repeat: no-repeat;
-   /* background-size: 100% 720px; */ 
-    /*overflow: auto; */
+    background-image: url("../images/img9.png");
+    background-repeat: no-repeat; 
+   background-size: 100% 720px; 
+    overflow: hidden; 
     }
-
+/*
+div#choice2{
+    margin: 0 auto;
+   padding: 10px;
+    padding-left: 10px;
+    margin-left: 245px; 
+    float: right; 
+ }
+*/
 div#log {
     width: 330px;
-    height: 300px;
+    height: 340px;
     text-align: center;
     background-color: #34495E ;
     border-radius: 5px;
@@ -414,11 +401,11 @@ form#log{
   
 }
 */
+
+
 form#log{
-     margin-top: 5em;
-    margin-bottom: 5.6em;
-    margin-left: em;
-    margin-right: em;
+     margin-top: 4em;
+    margin-bottom: 4.6em;
     padding: 1.25em;
         
    
@@ -429,7 +416,7 @@ div#log img{
     width: 150px;
     height: 150px;
     margin-top: -90px;
-    margin-bottom: -90px;
+    margin-bottom: -70px;
      margin-right: 50px;
     margin-left: 50px;
     border-radius: 5px;
@@ -439,291 +426,227 @@ div#log img{
     
 }
 
-input {
-    height: 30px;
-    width: 300px;
-    font-size: 18px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    background-color: antiquewhite;
-    float: center;
+div#log .form-control {
+   
 }
 
 input.btn {
     margin-bottom: 30px;
     margin-left: 20px;
     float: right;
+
 }
 
 div#text a{
     color: white;
-}
-
-
-/*
-.form-group: :before {
-    content: "\e008";
-    position: absolute;
-    font-family: 'Glyphicons Halflings';
-    font-size: 30px;
-    
-} */
-
-
-/*
-@media (max-width: 599px) {
-  #header .container {
-    width: 100%;
-  }
-  #header h1 {
-    padding-left: 3%;
-  }
-*/
-
-/*Responsive */
-
-
-@media screen and (max-width:480px){
- 
-    
-body {
-   margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-input:invalid {
-  border: 1px solid red;
-}
-
-input:valid {
-  border: 1px solid green;
-}
-
-#header {
-  z-index: 2;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  line-height: 60px;
-}
-
-
-
-
-/* CSS for home page */
-.home{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-     padding: 0;
-  border: 0;
-    background-image: url("../images/img8.png");
-   background-repeat: no-repeat;
-    background-size: 100% 720px;  /*  */
-    overflow: auto;
-   
-    }
-
-
-div#welcome img{
-    
-       margin: 0 auto;
-     height: 250px;
-    margin-left: 550px;
-    margin-top: 200px; 
-    margin-bottom: 200px;
-    border-radius: 5px;
-     opacity: 0.80;
-    filter: alpha(opacity=80);
-  }
-
-/*
-div#welcome img{
- margin: 0 auto;
- margin-left: 400px;
- height: 200px;
-     opacity: 0.70;
-    filter: alpha(opacity=70);
-} 
-
-div#welcome p{
-      margin: 0 auto;
-    margin-top: 80px;
-    font-weight: 300;
-     font-family: "Times New Roman", Times, serif;
-   float: left;
- } 
-
-small{
-    font-style: oblique;
-}
-
-*/
-
-div#choice{
-    
-    margin: 0 auto;
-    margin-right: 30px;
-   float: right;
-    padding: 10px;
-   
-    
-   /* padding: 10px;
-     margin-left: 245px; 
-    float: left;*/
- }
- /*
-div#choice2{
-    margin: 0 auto;
-   padding: 10px;
-    padding-left: 10px;
-    margin-left: 245px; 
-    float: right; 
- }
-*/
-
-/* CSS for sign-in page */
-
-.signup{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-  padding: 0;
-  border: 0;
-    background-image: url("../images/img9.png");
-    background-repeat: no-repeat;
-    background-size: 100% 720px; 
-    overflow: hidden;
-    
-    
-    }
-
-
-
-div#sign {
-  /* width: 400px;
-    height: 560px; */
-    text-align: center;
-    background-color: #34495E ;
-    border-radius: 5px;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 450px;
-    margin-left: 500px;
-    opacity: 0.95;
-    filter: alpha(opacity=95);
-   /* overflow-y: auto;*/
-    z-index: 5;
-
-}
-
-.img {
-  margin-top: 1.5em;
-  margin-bottom: -2.5em;
- /* position: fixed;
-    z-index: 2; 
-    margin-left: 4.0em;
-    margin-right: 4.0em;
-    */
-    border-radius: 5px;
-}
-
-
-form span {
-   color:antiquewhite;
-   /* font-style: italic;
-    font-size:  0.95em; */
-    font: italic 14px cosmic sans; 
-    margin-top: -55px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: -35px;
-    padding: -10px;
-    align-self: center;
-       
-  }
-
-form#sign{
-     margin-top: 20px;
-    margin-bottom: -15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-  
-}
-
-.form-control{
-    margin-bottom: 5px;
-    margin-top: 0px;
-    margin-left: 40px;
-    margin-right: 10px;
-    padding: 10px;
-    
- }
-
-
-
-.form-group {
-     margin-left: -30px;
-    margin-right: 10px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-}
-
-form i{
-    margin-left: 0px;
-    margin-right: -40px;
+    margin-left: 1em;
+    font: italic 14px cosmic sans;
     float: left;
     clear: left;
 }
 
-form#sign input.btn{
-     margin-top: -10px;
-    margin-bottom: 20px;
-clear: none;
-     display: inline;
+div#log select{font: normal bold 15px cosmic sans; padding: 0.5em; margin-left: 1.8em; margin-bottom: 3em;}
+
+
+
+/*Responsive */
+
+
+
+
+
+
+
+
+/*reponsive.................................................................................................................................. */
+
+@media only screen
+and (min-width : 1025px) { /* Desktop */
+.pc{display:inherit!important;} .tb{display:none!important;} .lg{display:inherit!important;} .mb{display:none!important;}
+.pc{display:inherit!important;}
+.nopc{display:none!important;}
+/*.body{width:600px!important; max-width:600px!important; height:100%;  margin:0 auto;}
+.bar{width:600px!important; max-width:600px!important;   margin:0 auto;}
+.max {max-width:500px;} */
+/*forms */
+
+}
+/*......................desktop ends..................*/
+/*.......................mobile.....................*/
+@media only screen
+and (min-device-width : 320px) 
+
+and (max-device-width : 480px) {/*mobile*/
+/*.col-xs{margin:0px;}*/
+.mb{display:none!important;} .tb{display:none!important;} .lg{display:none!important;} .pc{display:none!important;} .pconly{display:none;}
+.mb{display:inherit!important;}
+.nomb{display:none!important;}
+  
+html{width:100%; height:100%; padding:0; margin:0; overflow-x:hidden; font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+    
+body{font-size:11px; background-color:#eaeaea; width:100%; max-height:100%; margin:0px; height: 100%; margin: 0;  padding: 0; border: 0;}    
+body[orient="portrait"] { min-height:540px; }
+body[orient="landscape"] { min-height:400px; }
+
+.home {width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;background-position:center; background-image: url("../images/Riwama.png"); background-repeat: no-repeat; background-size: 100% 360px; overflow: hidden; }
+    div#welcome img {display:none;}
+ 
+div#welcome{background-color: transparent; background-position: center; max-height: 100%; margin-top:7em; margin-left: 1em; margin-right: 1em; margin-bottom: 3em;}
+.quote{margin-top: 90vh; display: block; background-position: center; font: italic bold 14px cosmic sans; color:steelblue;align-self: center;} 
+
+/* Sign Up Form For Mobile */
    
-    }
-
-
-div#sign img{
-     margin: 0 auto;
- margin-left: 400px;
- height: 140px;
+ .signup{background-image: none;background-color: #34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
+input#altlog{margin-top: 3em; margin-bottom: 3em;}
+div#sign{display:block; padding: 0; border: 0;background-position:center; text-align: center;background-color: #34495E; margin-top: 2.3em;}
+div#sign img#img{display:none;}
+.regform{display: flex; color: aliceblue; margin-top: -4em; margin-bottom: -6em; font: normal bold 13px; margin-left: 3.5em; border-radius: 1em; }
+    .regform >a{ color: aliceblue;}
+    form#sign { margin-top: 0em; margin-bottom: 2em;}
+form#sign .err{margin-top: -5em; margin-bottom: 10em; font: italic 13px cosmic sans;}
+ form#sign .regbut{margin-top:1em;}
+form#sign input#clear{margin-left:7em; margin-right: 8em;margin-top: 0em;}
+form#sign input#next{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
     
-   /* width: 150px;
-    height: 150px; */
-    margin-top: -320px; 
-    margin-bottom: -200px;
-     margin-right: 50px;
-    margin-left: 50px;
-    border-radius: 5px;
-  /*  position: fixed;
-    z-index: 2; */ 
-     
-    /*opacity: 0.95;
-    filter: alpha(opacity=95); /* For IE8 and earlier */
+    form#sign div#accept{display: none;}
     
-}
+    /* Services Form For Mobile */
 
+    .next{background-image: none;background-color: #34495E; margin-left: 0em; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
+    div#next{display: block; margin-left: 0em; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
+  div#next img{ margin-top: -2.5em; margin-bottom: -10em; height: 5em; width: 5em;}
+    form#form2{margin-top:5em; margin-left: 1em;}
+    form#form2 h5{margin-top: 2.1em; margin-left: 0;margin-right:0;;display: flex; font: italic 15px cosmic sans;}
+   div#next .done input{ background-color: red; float: right;}
     
-}
-
-
-
-@media screen and (min-width:480px) and (max-width:640px){
+    
+/*  Login For Mobile */ /*
+    
+.login {background-image: none; background-color: #34495E;}
+div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; }
+    div#log img{height: 10em; width: 10em; margin-top: 2em; margin-bottom: -0.5em;}
+    
  
   
+    form#log { margin-top: 2em;}
+    input#altreg { margin-right: -2em;} 
+
+    
+    */
+
+    
+/*  Login For Mobile */
+    
+.login {background-image: none; background-color: #34495E;}
+div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; }
+div#log img{height: 10em; width: 10em; margin-top: 5em; margin-bottom: -0.5em;}
+
+    form#log { margin-top: 2em; margin-left: 0em;}
+    form#log select{margin-left: 2em;display: flex;}
+    input#altreg { margin-right: -2em;}
+    div#select {margin-left:inherit;}
+    
+    
+    
+    
+    
+
 }
 
+/*@media only screen and (min-device-width : 320px) */
+@media screen and (max-width:480px){
+    /*.col-xs{margin:0px;}*/
+.mb{display:none!important;} .tb{display:none!important;} .lg{display:none!important;} .pc{display:none!important;} .pconly{display:none;}
+.mb{display:inherit!important;}
+.nomb{display:none!important;}
+  
+html{width:100%; height:100%; padding:0; margin:0; overflow-x:hidden; font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+    
+body{font-size:11px; background-color:#eaeaea; width:100%; max-height:100%; margin:0px; height: 100%; margin: 0;  padding: 0; border: 0;}    
+body[orient="portrait"] { min-height:540px; }
+body[orient="landscape"] { min-height:400px; }
 
-
-
-@media screen and (min-width:480px){
+.home {width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;background-position:center; background-image: url("../images/Riwama.png"); background-repeat: no-repeat; background-size: 100% 360px; overflow: hidden; }
+    div#welcome img {display:none;}
  
+div#welcome{background-color: transparent; background-position: center; max-height: 100%; margin-top:7em; margin-left: 1em; margin-right: 1em; margin-bottom: 3em;}
+  
+.quote{margin-top: 90vh; display: block; text-align: center; font: italic bold 14px cosmic sans; color:steelblue;align-self: center;} 
+
+/* Sign Up Form For Mobile */
+    
+ .signup{background-image: none;background-color: #34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
+  header input#altlog{margin-top: 0.3em;margin-bottom: -0.5em;}
+div#sign{display:block; background-color:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;background-position:center; text-align: center; margin-top: 9em;}
+div#sign img{height: 9em; width: 9em; margin-top: -1.5em; margin-bottom: -1.5em;}
+/*.regform{display: flex; color: aliceblue; margin-top: -3em; margin-bottom: 2em;font:normal bold 13px; margin-left: 0.5em; height: 1.8em; }
+    .regform >a{ color: aliceblue;} */
+form#sign span{margin-top: -3.5em; margin-bottom: 2em;padding: 2em; font: italic 14px cosmic sans;}
+.form-group{padding: 0.3em;} 
+
+ 
+ form#sign .regbut{margin-top: 0.5em;}
+form#sign input#clear{margin-left:7em; margin-right: 8em;margin-top: -1em;}
+form#sign input#next{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
+      div#accept .cr{ height: 0.5em; width: 0.5em; background-color: fuchsia; float: left; display: none;}
+      div#accept { font: italic 12px cosmic sans; margin: 0; margin-bottom: 2em;}
+/* Services For Mobile */
+    
+    
+    .next{background-image: none;background-color: #34495E;}
+    div#next{display: block; margin-left: 0em; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
+    div#next img{height: 10em;width: 10em; margin-top: 3em;}
+    form h5{margin-top: 6em; margin-left: 0;margin-right: 0;display: flex; font: italic 15px cosmic sans;}
+    .checkbox{padding: -1em; font: normal 14px cosmic sans; margin-bottom: -1em;display: flex;}
+    
+/*  Login For Mobile */
+    
+.login {background-image: none; background-color: #34495E;}
+div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; }
+    div#log img{height: 10em; width: 10em; margin-top: 5em; margin-bottom: -0.5em;}
+
+    form#log { margin-top: 2em; margin-left: 0em;}
+    form#log select{margin-left: 2em;display: flex;}
+    input#altreg { margin-right: -2em;}
+    div#select {margin-left:inherit;}
     
 }
+
+
+/*...............mobile ends..........................*/
+/*................................tabs......................*/
+@media only screen
+and (min-device-width : 481px) 
+and (max-device-width : 1024px){ /* Tablet */
+.tb{display:inherit!important;} .tb{display:inherit!important;} .lg{display:none!important;} .pc{display:none!important;} .pconly{display:none;} .mb{display:none!important;}
+.tb{display:inherit!important;}
+.leftbar{width:25%;} .body{width:75%; margin-left:25%;}
+.notb{display:none!important;}
+.body{width:600px; height:100%; height:100%; min-height:800px; max-width:600px; margin:0 auto;}
+.bar{width:600px!important; max-width:600px!important;   margin:0 auto;}
+.max {width:100%; max-width:500px;}
+}
+/*.................tabs end.......................*/
+/*.....................large screens..............*/
+@media only screen
+and (min-width : 1824px) {/*largescreens*/
+html{width:100%; background:#d2d2d2;}
+/*body{margin:auto 0px; max-width:1025px;}*/
+.pc{display:inherit!important;} .tb{display:none!important;} .lg{display:inherit!important;} .mb{display:none!important;}
+.pc{display:inherit!important;}
+.body{width:600px!important;  max-width:600px!important; height:100%;  min-height:600px; margin:0 auto;}
+.bar{width:600px!important; max-width:600px!important;   margin:0 auto;}
+.max {max-width:500px;}
+}
+/*....................largescreen ends................*/
+
+/* responsive ....................ends........................................*/
 
 
 

@@ -161,7 +161,7 @@ function  register(){
         url: 'register.php',    //give your url here
         type: 'POST',
        cache: false,
-        async : false,
+       // async : false,
         data: data,
         error: function(data){
 			console.log(data.message);
@@ -189,3 +189,48 @@ function  register(){
     return valid;
   
 	}
+
+
+
+
+/* LOGIN */
+
+
+
+function loguser()
+{
+ var name=document.getElementById( "username" ).value;
+var pass=document.getElementById( "password" ).value;
+
+ if(name != '' && pass != '')
+//name is always a value u can use this only if name could return null but an input will always return a value might be '' though but will never be null
+ {
+  $.ajax({
+  type: 'post',
+  url: 'log.php',
+  cache: false,
+  data: {
+   'username':name,
+   'password':pass,
+  },
+  success: function (response) {
+   $( '#err8' ).html(response);
+   if(response=="Correct")	
+   {
+    return true;	
+   }
+   else
+   {
+    return false;	
+   }
+  }
+  });
+
+ }
+       else
+ {
+  $( '#err8' ).html("");
+  return false;
+ }
+}
+
