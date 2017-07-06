@@ -1,16 +1,49 @@
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     // $(".home").load(function(){
     $(".home").show();
     $(".signup").hide();
     $(".next").hide();
     $(".login").hide();
 });
-
+ */
 
    // });
 
+/*
+$(document).ready(function(){
+    $(".body").load(function(){
+        $(".home").show();
+    });
+});
+*/
 
+$(document).on('click','.admin',function(){
+  // $(location).attr('href', 'admin.php')
+    location.href="admin.php";
+     //$(".admin").show();
+});
+
+$(document).on('click','.vendor',function(){
+  // $(location).attr('href', 'admin.php')
+    location.href="index.php";
+    
+             $(".home").hide();
+        $(".login").show();
+        $(".next").hide();
+         $(".signup").hide();
+     //$('[class="login"]').append();
+  //  window.location.href= 'http://sample.com/products.php/#shoes';
+/*    $(document).on('load','.body',function(){
+  // $(location).attr('href', 'admin.php')
+       // $(".home").hide();
+        $(".login").show();
+       // $(".next").hide;
+        // $(".signup").hide()
+});
+*/
+        
+});
 
 
 
@@ -18,7 +51,7 @@ $(document).ready(function(){
     $("#vreg").click(function(){
         $(".home").hide();
         $(".login").hide();
-        $(".next").show();
+        $(".next").hide();
          $(".signup").show();
     });
 });

@@ -1,3 +1,6 @@
+<?php
+   //include('session.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,11 +34,11 @@
 	              </div>	          
 	                         
                  <div class="dropdown">
-                     <button class="btn dropdown-toggle" data-toggle="dropdown" > My Account  <b class="caret"></b> </button>
+                     <button class="btn dropdown-toggle" data-toggle="dropdown" > My Account <b class="caret"></b> </button>
                      <ul class="dropdown-menu">
                           <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard">&nbsp;</span>Profile</a></li>
                                 <li class="divider"></li>
-	                          <li><a href="index.html"><span class="glyphicon glyphicon-log-out">&nbsp;</span>Logout</a></li>
+	                          <li><a href="logout.php"><span class="glyphicon glyphicon-log-out">&nbsp;</span>Logout</a></li>
                          
                      </ul>                   
                    </div>

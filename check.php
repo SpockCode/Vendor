@@ -13,7 +13,7 @@ $user="root";
 $pass="root";
 $db="riwama";
 
-$connect= mysqli_connect("localhost", "root", "root", "riwama") or die ("Please, Check Your Server Connection."); //Connect to server
+$connect= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Check Your Server Connection."); //Connect to server
 
 //mysqli_select_db($connect, "riwama"); // makes use of the database
 
@@ -46,15 +46,16 @@ if (isset($_POST['companyname'])) {
 
  $cname= $_POST['companyname'];
 
-$query=mysqli_query($connect, "SELECT * FROM vendor WHERE vname ='$cname'");
+$query1=mysqli_query($connect, "SELECT * FROM vendor WHERE vendor_name ='$cname'");
 
   
-$check1 = mysqli_num_rows($query);
+$check1 = mysqli_num_rows($query1);
     
+ 
   
     if($check1>0) {
         
-         echo "This Company Name is Already registered!";
+         echo "This Company Name is Already Registered!";
                // response==0;
     }
     
@@ -65,6 +66,32 @@ $check1 = mysqli_num_rows($query);
      exit();
 }
 
+
+if (isset($_POST['RegNo'])) {
+
+    //code here....
+
+ $regno= $_POST['RegNo'];
+
+//$query2=mysqli_query($connect, "SELECT * FROM vendor WHERE vendorID ='$regno'");
+$query2=mysqli_query($connect, "SELECT * FROM vendor WHERE vendor_name ='$regno'");
+
+  
+$check2 = mysqli_num_rows($query2);
+      
+  
+    if($check2>0) {
+        
+         echo "A company is registered with this Number!";
+               // response==0;
+    }
+    
+    else{
+    echo "Correct";
+       //  response==1;
+    }
+     exit();
+}
 
 
 

@@ -27,18 +27,28 @@
     </nav>
      <br/> -->
 </head>
-<body>
+<body class="body">
       <div class="">
-    <section class="home"> 
+    <section class="home"  > 
           <header id="header">
+           <!--   <div class="container-fluid col-md-5 col-sm-6 col-xs-6" id="admin">
+              <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-6" id="admin" value="Admin">
+              </div>
             
-             <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
-     <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="vlog"  value="Login"> 
+             <div class="container-fluid col-md-5 col-sm-6 col-xs-6" id="choice">
+                 
+    <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-6" id="vlog"  value="Login">                  
+    <input class="btn  btn-md btn-primary col-md-2 col-sm-2 col-xs-6" type="submit"  id="vreg" value="Sign Up">
+                 
+     </div> -->
               
-              
-                   
-          <input class="btn  btn-md btn-primary col-md-2 col-sm-2 col-xs-3" type="submit"  id="vreg" value="Sign Up">
-     </div>
+              <div class="container-fluid col-md-12 col-sm-12 col-xs-12" id="head">
+              <input type="submit" class="admin btn btn-md btn-primary col-md-1 col-sm-1 col-xs-3" id="admin" value="Admin" > <!--location.href='admin.php' -->
+                           
+    <input type="submit" class="btn btn-md btn-primary col-md-0 col-sm-1 col-xs-3" id="vlog"  value="Login">                  
+    <input class="btn  btn-md btn-primary col-md-0 col-sm-1 col-xs-3" type="submit"  id="vreg" value="Sign Up">
+     
+              </div>
     </header>
     
         <div id="welcome">
@@ -46,10 +56,11 @@
         <blockquote class="quote"> Rivers State Waste Management Agency</blockquote>
         </div>
     </section>
- <section class="signup"> 
+ <section class="signup" style="display:none"> 
          <header id="header">            
              <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
     <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-3 col-xs-3" id="altlog" value="Login"> 
+                       <input type="submit" class="admin btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="admin" value="Admin">
               
      </div>
     </header>
@@ -64,41 +75,48 @@
      <br>
      
      <fieldset class="col-md-9 col-sm-9 col-xs-9">
+         <input type="hidden" name="authType"  id="authType" value="register">
+         <div class="form-group has-feedback">
+                           
+           <input class="form-control" type="text" name="RegNo" id="RegNo" placeholder="Company Registered No." required="required" onkeyup="checkreg();"><i class="glyphicon glyphicon-briefcase form-control-feedback"></i><span class="err" id="err0"> </span>
+                    
+            </div> <br>
             <div class="form-group has-feedback">
               
-           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Enter Company Name" required="required" onkeyup="checkcompany();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="err" id="err1"> </span>
+           <input class="form-control" type="text" name="companyname"  id="companyname" placeholder="Company Name" required="required" onkeyup="checkcompany();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="err" id="err1"> </span>
                     
             </div> <br>
              <div class="form-group has-feedback ">
-           <input class="form-control" type="email" name="companyemail" id="companyemail" placeholder="Enter Company Email" value="" required="required"><i class="glyphicon glyphicon-envelope form-control-feedback"></i><span class="err" id="err2"></span>
+           <input class="form-control" type="email" name="companyemail" id="companyemail" placeholder="Company Email" value="" required="required"><i class="glyphicon glyphicon-envelope form-control-feedback"></i><span class="err" id="err2"></span>
             </div> <br>
             <div class="form-group has-feedback">
-            <input class="form-control" type="number" min="10" name="telephone" id="telephone" placeholder="Enter Company Phone Number" required="required"><i class="glyphicon glyphicon-phone-alt form-control-feedback"></i><span class="err" id="err3"></span>
+            <input class="form-control" type="number" min="10" name="telephone" id="telephone" placeholder="Company Phone Number" required="required"><i class="glyphicon glyphicon-phone-alt form-control-feedback"></i><span class="err" id="err3"></span>
             </div> <br>
             <div class="form-group has-feedback">
-            <input class="form-control" type="text" name="address" id="address"  placeholder="Enter Company Address" required="required"><i class="glyphicon glyphicon-home form-control-feedback"></i><span class="err" id="err4"></span>
+            <input class="form-control" type="text" name="address" id="address"  placeholder="Company Address" required="required"><i class="glyphicon glyphicon-home form-control-feedback"></i><span class="err" id="err4"></span>
             </div> <br>
              <div class="form-group has-feedback ">
-           <input class="form-control" type="text" name="username" id="username" placeholder="Enter Username"   required="required" onkeyup="checkuser();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="err" id="err5"></span>
+           <input class="form-control" type="text" name="username" id="username" placeholder="Username"   required="required" onkeyup="checkuser();"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="err" id="err5"></span>
             </div> <br>
              <div class="form-group has-feedback">
-            <input class="form-control" type="password" name="password"  id="password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="err" id="err6"></span>
+            <input class="form-control" type="password" name="password"  id="password" placeholder="Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="err" id="err6"></span>
             </div> <br>
             <div class="form-group has-feedback">
             <input class="form-control" type="password" name="cpassword" id="cpassword" placeholder="Re-Type Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="err" id="err6"></span>
             </div>
          </fieldset>
-       <div class="checkbox col-md-12 col-sm-12 col-xs-12" id="accept">
+     <!-- <div class="checkbox col-md-12 col-sm-12 col-xs-12" id="accept">
           <label>  I accept the <a>Terms of Service</a> and <a>Privacy Policy</a>
-            <input type="checkbox" value="Accept" >
+            <input type="checkbox" value="Accept" id="accept">
            
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>            
           </label>
-        </div>
-              <div class="regbut col-md-9 col-sm-9 col-xs-10">
-           <input type="reset" class="btn btn-md btn-primary col-md-3 col-sm-3 col-xs-4" id="clear" value="Clear" /> 
-            <input type="submit" class="btn btn-md btn-primary col-md-3 col-sm-3 col-xs-4" id="next" name="next" value="Next">            
-        </div>
+        </div> <br/> -->
+     <br/>
+        <div class="regbut col-md-9 col-sm-9 col-xs-10">
+          <input type="reset" class="btn btn-md btn-primary col-md-3 col-sm-3 col-xs-4" id="clear" value="Clear" /> 
+          <input type="submit" class="btn btn-md btn-primary col-md-3 col-sm-3 col-xs-4" id="submit" name="submit" value="Submit">            
+        </div> 
        </form>
      <!--   <script type="text/javascript">
                  document.getElementById("sign").reset();
@@ -107,10 +125,11 @@
      </div> 
     </section>
     
-    <section class="next" id="sec"> 
+    <section class="next" id="sec" style="display:none"> 
          <header id="header">            
              <div class="container-fluid col-md-5 col-sm-5 col-xs-5" id="choice">
-    <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-2" id="altlog2" value="Login"> 
+    <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="altlog2" value="Login"> 
+                  <input type="submit" class="admin btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="admin" value="Admin">
              
      </div>
     </header> 
@@ -145,8 +164,8 @@
             </div><br>
          <div class="checkbox">
           <label>
-        <input type="checkbox" value=" Desinting" >
-               Desinting
+        <input type="checkbox" value="De-Silting" >
+               De-Silting
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
                 </label>
         </div>  <br> &nbsp;
@@ -169,39 +188,92 @@
      </div> 
     </section>
     
-  <section class="login" id="login"> 
-          <header id="header">       <div class="container-fluid col-md-5 col-sm-5 col-xs-5" id="choice">
+  <section class="login" id="login" style="display:none"> 
+          <header id="header">       <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
     <input type="submit" class="btn btn-md btn-primary col-md-2" id="altreg" value="Sign Up"> 
+               <input type="submit" class="admin btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="admin" value="Admin">
               
      </div>
     </header>
+  <!--   <div class="log" style="background: gray">
+         <div class="textadmin col-md-4 col-sm-4 col-xs-4" ><br/><br/> <h3> Not a Vendor? &nbsp; <br/> <span class="line"> <input type="button" class="btn btn-danger col-md-2 col-sm-2 col-xs-3" id="navadmin" value="Login"/> &nbsp; as an Administrator.</span> </h3><br/></div> </div>
+-->
     <div class="container" id="log">
-         <a href="index.php"> <img class="img-thumbnail" src="images/Riwama.png"> </a>  <br><br>
-        <form class="col-md-10 col-sm-10 col-xs-10" id="log" > <!--enctype="application/json" -->
+         <a href="index.php" id="logimg"> <img class="img-thumbnail" src="images/Riwama.png"> </a>  <br><br>
+        <form class="log col-md-10 col-sm-10 col-xs-10" id="log"  method="post" action="login.php"> <!--enctype="application/json" -->
             
             <!-- <blockquote class="logform"><a href="index.php"><span class="glyphicon glyphicon-login">Login</span> </a></blockquote> -->
-            
+           <div id="msg"> Invalid Username and Password!  Please try again. </div>
+           <div id="msg1"> Enter Username and Password. </div>
             <div class="form-group has-feedback">
-            <input class="form-control" type="text" name="companyname" placeholder="Enter Company Name" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="" id="err8"></span>
+                <input type="hidden" name="authType" id="authType" value="login">
+                <input type="hidden" name="usertype" id="usertype" value="vendor">
+            <input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="" id="err8"></span>
             </div> <br>
             <div class="form-group has-feedback">
-            <input class="form-control" type="password" name="Password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="" id="err9"></span>
+            <input class="form-control" type="password" name="password" id="password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="" id="err9"></span>
             </div> <br>
-            <div class="form-group col-md-8 col-sm-8 col-xs-7" id="select">  
-               <select class="form-control">
-                <option default> - Select - </option>
+           <!-- <div class="form-group col-md-8 col-sm-8 col-xs-7" id="select">  
+               <select class="form-control" id="usertype"  name="usertype" required="required">
+                <option value="">-User Type- </option>
                 <option  value="vendor"> Vendor </option>
-                <option  value="riwama"> RIWAMA</option>
+                <option  value="admin"> Admin </option>
                </select> 
-            </div> <br>
+            </div> <br> -->
              <div id="text"><p> <a href="RetrievePassword.html"> Forgot Password ? </a></p>
           
-             <input type="submit" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" name="submit" value="Login">
+             <input type="submit" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="login" name="submit" value="Login" >
                </div>  <br>
            
         </form> <br> <br>
+        
+       <!-- </div> -->
      </div> 
+<!--
+    </section>
+           <section class="login" id="login" style="display:none"> 
+          <header id="header">       <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
+  
+               <input type="submit" class="vendor btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="vendor" value="Vendor">
+              
+     </div>
+    </header>
+     <!-- <div class="log">
+      <div class="textadmin col-md-4 col-sm-4 col-xs-4" ><br/><br/> <h3>&nbsp; Not a Vendor? &nbsp; <br/>  <input type="button" class="btn btn-danger col-md-2 col-sm-2 col-xs-3" id="navadmin" value="Login"/> &nbsp; as an Administrator. </h3><br/></div> -->
+<!--
+      <div class="container" id="log">
+         <a href="index.php"> <img class="img-thumbnail" src="images/Riwama.png"> </a>  <br><br>
+        <form class="log col-md-10 col-sm-10 col-xs-10" id="log"  method="post" action="login.php"> <!--enctype="application/json" -->
+            
+            <!-- <blockquote class="logform"><a href="index.php"><span class="glyphicon glyphicon-login">Login</span> </a></blockquote> -->
+      
+<!--
+            <div id="msg"> Invalid Username and Password!  Please try again. </div>
+           <div id="msg1"> Enter Username and Password. </div>
+            <div class="form-group has-feedback">
+            <input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required="required"><i class="glyphicon glyphicon-user form-control-feedback"></i><span class="" id="err8"></span>
+            </div> <br>
+            <div class="form-group has-feedback">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Enter Password" required="required"><i class="glyphicon glyphicon-lock form-control-feedback"></i><span class="" id="err9"></span>
+            </div> <br>
+           <!-- <div class="form-group col-md-8 col-sm-8 col-xs-7" id="select">  
+               <select class="form-control" id="usertype"  name="usertype" required="required">
+                <option value="">-User Type- </option>
+                <option  value="vendor"> Vendor </option>
+                <option  value="admin"> Admin </option>
+               </select> 
+            </div> <br> -->
+<!--     
+      <div id="text"><p> <a href="RetrievePassword.html"> Forgot Password ? </a></p>
+          
+             <input type="submit" class="btn btn-md btn-primary col-md-4 col-sm-4 col-xs-4" id="login" name="submit" value="Login" >
+               </div>  <br>
+           
+        </form> <br> <br>
+    
+
+      </div> 
        </section>
-        <!--   </div> body -->
+   -->     
  </body>
 </html>

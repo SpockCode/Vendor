@@ -6,22 +6,83 @@ $user="root";
 $pass="root";
 $db="riwama";
 
-$connect= mysqli_connect("localhost", "root", "root", "riwama") or die ("Please, Check Your Server Connection."); //Connect to server
+//$connect= mysqli_connect("localhost", "root", "root", "riwama") or die ("Please, Check Your Server Connection."); //Connect to server
+$connect= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Check Your Server Connection."); //Connect to server
 
-mysqli_select_db($connect, "riwama"); // makes use of the database
 
-    
-
-//if (isset($_POST['submit'])) {
-
+ $ID=$_POST['RegNo'];
     $name=$_POST['companyname'];
 	$email=$_POST['companyemail'];
 	$telephone= $_POST['telephone'];
 	$address= $_POST['address'];
 	$username= $_POST['username'];
+	$pass= $_POST['password'];
+	$password= sha1($pass);
+  	$cpassword= $_POST['cpassword'];
+    $type='vendor';
+    
+ 
+ 
+      $sql1 = "INSERT INTO vendor(VendorID , vendor_name, vendor_email, vendor_phone, vendor_add) VALUES ('$ID','$name','$email','$telephone','$address')";
+    
+    if($result2=$connection->query($sql1)){ 
+    
+    
+     $sql2= "INSERT INTO users( username, userpass, user_type) values ('$username','$password','$type')";
+     $result= $connection->query($sql2);
+        
+       $lastID= mysqli_insert_id($connection);
+        
+        $sql3="UPDATE vendor SET userID='$lastID' WHERE vendorID ='$ID'";
+         $result3= $connection->query($sql3);
+     
+    
+    }
+ 
+    if(($result) && ($result3))
+    {
+       $feeds= "SELECT vendor_email FROM vendor WHERE userID=LAST_INSERT_ID()";
+       $feeds2= "SELECT username FROM users WHERE userID=LAST_INSERT_ID()";
+       $feed=$connection->query($feeds);
+       $feed2=$connection->query($feeds2);
+       $display=mysqli_fetch_assoc($feed);
+       $display2=mysqli_fetch_assoc($feed2);
+       echo json_encode($display);
+       echo json_encode($display2);
+        
+        // Display Form Submitted
+    } else
+     {
+        echo $connection->error;
+     }
+
+
+
+//mysqli_select_db($connect, "riwama"); // makes use of the database
+
+    
+
+//if (isset($_POST['submit'])) {
+
+  /*  $name=$_POST['companyname'];
+	$email=$_POST['companyemail'];
+	$telephone= $_POST['telephone'];
+	$address= $_POST['address'];
+	$username= $_POST['username'];
 	$password= $_POST['password'];
-	$cpassword= $_POST['cpassword'];
-    $type= "vendor";
+  	$cpassword= $_POST['cpassword'];
+
+/*
+$name=mysqli_real_escape_string($connect, $_POST['companyname']);
+$email=mysqli_real_escape_string($connect, $_POST['companyemail']);
+$telephone=mysqli_real_escape_string($connect, $_POST['telephone']);
+$address=mysqli_real_escape_string($connect, $_POST['address']);
+$username=mysqli_real_escape_string($connect, $_POST['username']);
+$password=mysqli_real_escape_string($connect, $_POST['password']);
+$cpassword=mysqli_real_escape_string($connect, $_POST['cpassword']);
+*/
+
+   // $type= "vendor";
     
 /*if (!empty($name) and !empty($email) and !empty($telephone) and !empty($address) and !empty($username) and !empty($password) and !empty($cpassword)) 
 {
@@ -36,9 +97,10 @@ mysqli_select_db($connect, "riwama"); // makes use of the database
   else{ */
       
       //insert into Vendor table
-     $sql1 = "INSERT INTO vendor(vname, vemail, vphone, vaddress, username) 
-            VALUES ('$name', '$email', '$telephone', '$address', '$username')" ;
-    //mysqli_query($connect, $sql1); 
+/*$sql1 = "INSERT INTO vendor(VendorID, userID, vendor_name, vendor_email, vendor_phone, vendor_add) 
+            VALUES ('RT003949','5','Ricja', 'Rickaha@jdifid.com', '05888888455', 'No. 4 kdfkdjkfjk', 'kjdfjkdjkd')" ;
+          //  VALUES ('RT003949','5','$name', '$email', '$telephone', '$address', '$username')" ;
+    mysqli_query($connect, $sql1); 
       
  $rest1= mysqli_query($connect, $sql1); 
     
@@ -46,8 +108,9 @@ mysqli_select_db($connect, "riwama"); // makes use of the database
 
        
       //insert into users table
-     $sql2= "INSERT INTO users( username, userpass, user_type) values ('$username', '$password', '$type')";
-   // mysqli_query($connect, $sql2);
+     $sql2= "INSERT INTO users(userID,username, userpass, user_type) values ('5','username', sha1('password'),'usertype')";
+    // $sql2= "INSERT INTO users( username, userpass, user_type) values ('$username', sha1('$password'))";
+    mysqli_query($connect, $sql2);
       $rest2=mysqli_query($connect, $sql2);
 
 /*      if(mysqli_query($connect, $sql1)){
@@ -59,6 +122,7 @@ mysqli_select_db($connect, "riwama"); // makes use of the database
   }
 */
 //}
+/*
 	if (rest1 && rest2)
     {
     echo "Form Submitted Succesfully";
@@ -80,7 +144,7 @@ echo "Mail Sent.";
 	} 
     
  
-    
+    */
       
  // }
     

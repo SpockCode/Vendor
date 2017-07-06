@@ -44,9 +44,7 @@ input:valid {
 
 /* CSS for home page */
 .home{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+       margin: 0;
      padding: 0;
   border: 0;
     background-image: url("../images/img8.png");
@@ -68,13 +66,25 @@ div#welcome img{
      opacity: 0.80;
     filter: alpha(opacity=80);
   }
+  
+  div#head { margin 0;}
+ 
+ div#head input  { margin-top: 0.5em;}
 
+ /* div#admin{
+	     margin: 0 auto;
+    margin-left: 0em;
+   float: left;
+    padding: 10px;
+  }
 
+   */
+  div#head input#admin{ float: left;}
 
 div#choice{
-    
     margin: 0 auto;
-    margin-right: 30px;
+    margin-right: 1em;
+	margin-left: 1em;
    float: right;
     padding: 10px;
    
@@ -99,8 +109,7 @@ div#choice{
     background-repeat: no-repeat;
     background-size: 100% 720px; 
     overflow: hidden;
-    
-    
+  
     }
 
 
@@ -194,7 +203,7 @@ form i{
 
 form#sign input.btn{ margin-top: -10px;   margin-bottom: 20px; }
 
-form#sign input#next{margin-left: 10em; margin-right: -8em;}
+form#sign input#submit{margin-left: 10em; margin-right: -8em;}
 form#sign input#clear{margin-left: -6em; margin-right: 10em;}
 
 div#accept{text-align: justify; color: aliceblue; font: italic 13px cosmic sans; float: left; margin-top: -0.3em; margin-bottom: 0.5em; margin-left: -2em; margin-right: -5em; }
@@ -365,7 +374,7 @@ form#form2 label {
     background-image: url("../images/img9.png");
     background-repeat: no-repeat; 
    background-size: 100% 720px; 
-    overflow: hidden; 
+    overflow: hidden;
     }
 /*
 div#choice2{
@@ -376,9 +385,28 @@ div#choice2{
     float: right; 
  }
 */
+
+.log{
+float: left;
+clear: right;
+      margin-top: 150px;
+   
+}
+
+.textadmin{  margin-left: 1.5em;}
+.textadmin h3{
+	font: italic bold 28px cosmic sans;
+	color: red;
+}
+
+.log span{}
+
+.textadmin input#navadmin{
+	float: left;  clear: right; margin-left: 0em; }
+	
 div#log {
-    width: 330px;
-    height: 340px;
+    width: 330px; 
+    /*height: 340px; */
     text-align: center;
     background-color: #34495E ;
     border-radius: 5px;
@@ -404,10 +432,9 @@ form#log{
 
 
 form#log{
-     margin-top: 4em;
-    margin-bottom: 4.6em;
-    padding: 1.25em;
-        
+     margin-top: 5em;
+    margin-bottom: 0.5em;
+    padding: 1.25em;    
    
 }
 
@@ -425,6 +452,11 @@ div#log img{
     filter: alpha(opacity=95); /* For IE8 and earlier */
     
 }
+
+
+div#msg { margin-top: -3em;  margin-left: 1em; margin-right: -2.2em; margin-bottom: 2em; font-size:13px; font-family:verdana; color:#fff; border-color: red; border-radius: 5px/5px; border-style: solid; display: none;}
+div#msg1 { margin-top: -3em;  margin-left: 1em; margin-right: -2.2em; margin-bottom: 2em; font-size:13px; font-family:verdana; color:#fff; border-color: red; border-radius: 5px/5px; border-style: solid; display: none;}
+
 
 div#log .form-control {
    
@@ -500,18 +532,21 @@ div#welcome{background-color: transparent; background-position: center; max-heig
 /* Sign Up Form For Mobile */
    
  .signup{background-image: none;background-color: #34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0;}
-input#altlog{margin-top: 3em; margin-bottom: 3em;}
+    .signup header { margin-top: }
+.signup input#altlog{margin-top: 1em; }
+  .signup input#admin{ margin-top: 1em; }
 div#sign{display:block; padding: 0; border: 0;background-position:center; text-align: center;background-color: #34495E; margin-top: 2.3em;}
 div#sign img#img{display:none;}
 .regform{display: flex; color: aliceblue; margin-top: -4em; margin-bottom: -6em; font: normal bold 13px; margin-left: 3.5em; border-radius: 1em; }
     .regform >a{ color: aliceblue;}
     form#sign { margin-top: 0em; margin-bottom: 2em;}
 form#sign .err{margin-top: -5em; margin-bottom: 10em; font: italic 13px cosmic sans;}
- form#sign .regbut{margin-top:1em;}
+ .regbut{margin-top:1.5em;}
 form#sign input#clear{margin-left:7em; margin-right: 8em;margin-top: 0em;}
-form#sign input#next{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
+form#sign input#submit{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
     
     form#sign div#accept{display: none;}
+	
     
     /* Services Form For Mobile */
 
@@ -541,16 +576,17 @@ div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; heig
 /*  Login For Mobile */
     
 .login {background-image: none; background-color: #34495E;}
-div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin: 0; padding: 0; border: 0; }
-div#log img{height: 10em; width: 10em; margin-top: 5em; margin-bottom: -0.5em;}
-
-    form#log { margin-top: 2em; margin-left: 0em;}
+  .login #altreg{margin-right: 1.5em;} 
+div#log{display: block; background:#34495E; margin-left: 0px; width: 100vw; height: 100vh; margin-top:5em; padding: 0; border: 0; }
+div#log >a{margin-top: 10em;}
+div#log img{height: 10em; width: 10em; margin-top: 15em; margin-bottom: -0.5em;}
+.log .textadmin{display:none;}
+    form#log { margin-top: 2em; margin-left: 2em;}
     form#log select{margin-left: 2em;display: flex;}
     input#altreg { margin-right: -2em;}
     div#select {margin-left:inherit;}
     
-    
-    
+
     
     
 
@@ -593,9 +629,11 @@ form#sign span{margin-top: -3.5em; margin-bottom: 2em;padding: 2em; font: italic
  
  form#sign .regbut{margin-top: 0.5em;}
 form#sign input#clear{margin-left:7em; margin-right: 8em;margin-top: -1em;}
-form#sign input#next{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
+form#sign input#submit{margin-left: 10em; margin-right: 0em; margin-top: -3.9em;}
       div#accept .cr{ height: 0.5em; width: 0.5em; background-color: fuchsia; float: left; display: none;}
       div#accept { font: italic 12px cosmic sans; margin: 0; margin-bottom: 2em;}
+    
+   
 /* Services For Mobile */
     
     
