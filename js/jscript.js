@@ -1,22 +1,23 @@
 
-function checkreg()
-{
+
+function checkreg(){
  var reg=document.getElementById( "RegNo" ).value;
 
  if(reg != '')
+//name is always a value u can use this only if name could return null but an input will always return a value might be '' though but will never be null
  {
   $.ajax({
   type: 'post',
   url: 'check.php',
   cache: false,
   data: {
-   'vendorID':reg,
+   'RegNo':reg,
   },
   success: function (response) {
    $( '#err0' ).html(response);
    if(response=="Correct")	
    {
-    //document.getElementById("err0").innerHTML= " ";
+   //document.getElementById("err5").innerHTML= " ";
     return true;	
    }
    else
@@ -31,8 +32,9 @@ function checkreg()
  {
   $( '#err0' ).html("");
   return false;
- }
+ } 
 }
+
 
 
 function checkuser()
@@ -68,7 +70,7 @@ function checkuser()
  {
   $( '#err5' ).html("");
   return false;
- }
+ } 
 }
 
 
@@ -87,6 +89,9 @@ function checkcompany()
       cache: false,
   success: function (response) {
    $( '#err1' ).html(response);
+      /* $( '#err1' ).css({"display": "block"
+      );*/
+      
    if(response=="Correct")	
    {
     // document.getElementById("err1").innerHTML= " ";
@@ -99,11 +104,11 @@ function checkcompany()
   }
   });
   }
-      else
+     else
  {
   $( '#err1' ).html("");
   return false;
- }
+ } 
 }
 
 
@@ -112,7 +117,7 @@ function checkcompany()
 
 function register(){
     
-    var regNo = document.getElementById("RegNo").value;
+    var RegNo = document.getElementById("RegNo").value;
     var company = document.getElementById("companyname").value;
     var email = document.getElementById("companyemail").value;
     var telephone = document.getElementById("telephone").value;
@@ -127,17 +132,16 @@ function register(){
     var userhtml=document.getElementById("err5").innerHTML;
 
     
-         valid = true;
-     if (regNo.length <= 5)
-     {
-        
+        // valid = true;
+     if (RegNo.length <= 5)
+     {        
         document.getElementById("err0").innerHTML= "Company Reg. No. should be more than 5 letters!";
          valid = false;
     } else {  document.getElementById("err0").innerHTML= "";}
     
-    if(reghtml=="Correct"||reghtml== " ")
+    if(reghtml=="Correct")
        {
-            //document.getElementById("err1").innerHTML= "Company is already registered.";
+           /* document.getElementById("err0").innerHTML= " "; */
            valid = true;
        } else { document.getElementById("err0").innerHTML= "A Company is registered with this Number!";
                valid = false; /*document.getElementById("err1").innerHTML= ""; */ }
@@ -150,9 +154,9 @@ function register(){
          valid = false;
     } else {  document.getElementById("err1").innerHTML= "";}
     
-     if(namehtml=="Correct"||namehtml== " ")
+     if(namehtml=="Correct")
        {
-            //document.getElementById("err1").innerHTML= "Company is already registered.";
+          /*  document.getElementById("err1").innerHTML= " ";*/
           
            valid = true;
        } else { document.getElementById("err1").innerHTML= "Company is already registered.";
@@ -180,10 +184,10 @@ function register(){
       
 	} else { document.getElementById("err5").innerHTML= "";}
      
-   if(userhtml=="Correct"||userhtml==" ")
+   if(userhtml=="Correct" )
      
        {
-           // document.getElementById("err5").innerHTML= "Username  '" + username + "' is taken.";
+           /* document.getElementById("err5").innerHTML= " "; */
            
            valid = true;
       }
@@ -207,28 +211,28 @@ function register(){
     } else {valid = true;} */
      
     if (valid){
-	        
-    
-        var data = {'RegisteredNO': regNo,'companyname': company,'companyemail': email,'telephone': telephone,'address': address, 'username': username,'password': password };
+        var data = {'RegNo': RegNo,'companyname': company,'companyemail': email,'telephone': telephone,'address': address, 'username': username,'password': password };
 		// console.log(data);
 		 //console.log('this is data')
             
         $.ajax({
 	    //how are you running ur php is it via a server?
 		
-        url: 'register.php',    //give your url here
+        url: 'register.php',    //give your url  for php connection here
         type: 'POST',
        cache: false,
        // async : false,
         data: data,
-        error: function(data){
+    /*    error: function(data){
 			//console.log(data.message);
-			//console.log('error message')
+			//console.log('error message') 
+            valid=false;
            alert ("Registration Not Complete.");
-		},
+		}, */
         success: function(data){
-
-              alert ("Registration Complete.");
+             valid=true;
+             alert ("Registration Complete.");
+                     
         }
 		
           //   setTimeout(

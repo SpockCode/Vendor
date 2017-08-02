@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--
-// $thisPage="Home";  -->
+<!--// $thisPage="Home";  -->
 <html lang="en">
   <head>
  <meta http-equiv='cache-control' content='no-cache'>
@@ -28,6 +27,7 @@
      <br/> -->
 </head>
 <body class="body">
+  
       <div class="">
     <section class="home"  > 
           <header id="header">
@@ -40,8 +40,8 @@
     <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-2 col-xs-6" id="vlog"  value="Login">                  
     <input class="btn  btn-md btn-primary col-md-2 col-sm-2 col-xs-6" type="submit"  id="vreg" value="Sign Up">
                  
-     </div> -->
-              
+     </div> -->  <nav class="navbar navbar-transparent">
+           
               <div class="container-fluid col-md-12 col-sm-12 col-xs-12" id="head">
               <input type="submit" class="admin btn btn-md btn-primary col-md-1 col-sm-1 col-xs-3" id="admin" value="Admin" > <!--location.href='admin.php' -->
                            
@@ -49,20 +49,24 @@
     <input class="btn  btn-md btn-primary col-md-0 col-sm-1 col-xs-3" type="submit"  id="vreg" value="Sign Up">
      
               </div>
+               </nav>
     </header>
     
         <div id="welcome">
+           
         <img class="img-circle" src="images/Riwama.png">
-        <blockquote class="quote"> Rivers State Waste Management Agency</blockquote>
-        </div>
+        <blockquote class="quote"> Rivers State Waste Management Agency</blockquote> 
+        </div> 
     </section>
- <section class="signup" style="display:none"> 
-         <header id="header">            
+ <section class="signup" style="display:none" id="secsignup"> 
+         <header id="header">   
+             <nav class="navbar navbar-transparent">
              <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
     <input type="submit" class="btn btn-md btn-primary col-md-2 col-sm-3 col-xs-3" id="altlog" value="Login"> 
                        <input type="submit" class="admin btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="admin" value="Admin">
-              
+
      </div>
+             </nav>
     </header>
     
     <div class="container col-md-4 col-sm-4 col-xs-12" id="sign">
@@ -78,8 +82,7 @@
          <input type="hidden" name="authType"  id="authType" value="register">
          <div class="form-group has-feedback">
                            
-           <input class="form-control" type="text" name="RegNo" id="RegNo" placeholder="Company Registered No." required="required" onkeyup="checkreg();"><i class="glyphicon glyphicon-briefcase form-control-feedback"></i><span class="err" id="err0"> </span>
-                    
+           <input class="form-control" type="text" name="RegNo" id="RegNo" placeholder="Company Registered No." required="required" onkeyup="checkreg();"><i class="glyphicon glyphicon-briefcase form-control-feedback"></i><span class="err" id="err0"> </span>      
             </div> <br>
             <div class="form-group has-feedback">
               
@@ -112,6 +115,7 @@
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>            
           </label>
         </div> <br/> -->
+     <br/>
      <br/>
         <div class="regbut col-md-9 col-sm-9 col-xs-10">
           <input type="reset" class="btn btn-md btn-primary col-md-3 col-sm-3 col-xs-4" id="clear" value="Clear" /> 
@@ -188,12 +192,15 @@
      </div> 
     </section>
     
-  <section class="login" id="login" style="display:none"> 
-          <header id="header">       <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
+  <section class="login" id="seclogin" style="display:none"> 
+          <header id="header">   
+              <nav class="navbar navbar-transparent">
+                  <div class="container-fluid col-md-5 col-sm-7 col-xs-11" id="choice">
     <input type="submit" class="btn btn-md btn-primary col-md-2" id="altreg" value="Sign Up"> 
                <input type="submit" class="admin btn btn-md btn-primary col-md-2 col-sm-2 col-xs-3" id="admin" value="Admin">
               
      </div>
+              </nav>
     </header>
   <!--   <div class="log" style="background: gray">
          <div class="textadmin col-md-4 col-sm-4 col-xs-4" ><br/><br/> <h3> Not a Vendor? &nbsp; <br/> <span class="line"> <input type="button" class="btn btn-danger col-md-2 col-sm-2 col-xs-3" id="navadmin" value="Login"/> &nbsp; as an Administrator.</span> </h3><br/></div> </div>

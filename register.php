@@ -1,16 +1,40 @@
 <?php
 session_start();
 
+
+
+
+
 $host="localhost";
 $user="root";
 $pass="root";
 $db="riwama";
 
 //$connect= mysqli_connect("localhost", "root", "root", "riwama") or die ("Please, Check Your Server Connection."); //Connect to server
-$connect= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Check Your Server Connection."); //Connect to server
+$connection= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Check Your Server Connection."); //Connect to server
+/*
+ $ID=$_POST['RG00034'];
+    $name=$_POST['Naheem Investments'];
+	$email=$_POST['mutetha.eng@mail.com'];
+	$telephone= $_POST['080000000000'];
+	$address= $_POST['No 5 Nzimiro Street; Old GRA'];
+	$username= $_POST['naheem'];
+	$pass= $_POST['naheem'];
+	$password= sha1($pass);
+  	$cpassword= $_POST['naheem'];
+    $type='vendor';
 
+*/ 
+/*
+if (isset($_POST['submit'])) {
+     register();
+}
+else {die;}
 
- $ID=$_POST['RegNo'];
+function register(){
+    include('/../../connect.php');
+ */   
+    $ID=$_POST['RegNo'];
     $name=$_POST['companyname'];
 	$email=$_POST['companyemail'];
 	$telephone= $_POST['telephone'];
@@ -21,24 +45,23 @@ $connect= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Chec
   	$cpassword= $_POST['cpassword'];
     $type='vendor';
     
- 
- 
-      $sql1 = "INSERT INTO vendor(VendorID , vendor_name, vendor_email, vendor_phone, vendor_add) VALUES ('$ID','$name','$email','$telephone','$address')";
+
+      $sql1 = "INSERT INTO vendor(vendorID, vendor_name, vendor_email, vendor_phone, vendor_add) VALUES ('$ID','$name','$email','$telephone','$address')";
     
     if($result2=$connection->query($sql1)){ 
-    
-    
+        
      $sql2= "INSERT INTO users( username, userpass, user_type) values ('$username','$password','$type')";
-     $result= $connection->query($sql2);
+      $result=$connection->query($sql2);
         
        $lastID= mysqli_insert_id($connection);
         
         $sql3="UPDATE vendor SET userID='$lastID' WHERE vendorID ='$ID'";
-         $result3= $connection->query($sql3);
+   $result3= $connection->query($sql3);
      
     
-    }
- 
+    }  /*
+} */
+/*
     if(($result) && ($result3))
     {
        $feeds= "SELECT vendor_email FROM vendor WHERE userID=LAST_INSERT_ID()";
@@ -47,17 +70,16 @@ $connect= mysqli_connect("$host", "$user", "$pass", "$db") or die ("Please, Chec
        $feed2=$connection->query($feeds2);
        $display=mysqli_fetch_assoc($feed);
        $display2=mysqli_fetch_assoc($feed2);
-       echo json_encode($display);
-       echo json_encode($display2);
+       //echo json_encode($display);
+       //echo json_encode($display2);
         
         // Display Form Submitted
     } else
      {
         echo $connection->error;
      }
-
-
-
+die;
+*/
 //mysqli_select_db($connect, "riwama"); // makes use of the database
 
     
